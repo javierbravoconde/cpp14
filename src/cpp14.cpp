@@ -7,9 +7,30 @@
 //============================================================================
 
 #include <iostream>
+#include "uniform_initialization/uniformInit.h"
+#include "default_initialization/Widget.h"
+
 using namespace std;
 
+void runUniformInit()
+{
+	std::cout << "runUniformInit()" << std::endl;
+
+	UniformInit::initContainer();
+}
+
+void runDefaultInit()
+{
+	std::cout << "runDefaultInit()" << std::endl;
+
+	Widget aWidget;
+	std::cout << aWidget._NumberPets << std::endl;
+
+}
+
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+
+	runUniformInit();
+	runDefaultInit();
 	return 0;
 }
